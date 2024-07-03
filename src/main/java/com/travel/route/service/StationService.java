@@ -2,6 +2,7 @@ package com.travel.route.service;
 
 import com.travel.route.dto.StationRequest;
 import com.travel.route.model.Station;
+import com.travel.route.util.Graph;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,6 +14,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class StationService {
 
+    private final Graph graph = new Graph();
+
+
     /**
      * Creates a new station.
      *
@@ -21,7 +25,13 @@ public class StationService {
      * @return The created Station object.
      */
     public Station createStation(StationRequest body, Long station_id) {
-        return null;
+
+        Station station = new Station();
+        station.setId(station_id);
+        station.setName(body.getName());
+
+        graph.createStation(station_id);
+        return station;
     }
 
 }

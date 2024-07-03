@@ -16,6 +16,9 @@ import lombok.Setter;
 @Schema(description = "Model for Station. Represents a station with a name.")
 public class Station {
 
+    @Schema(description = "id of the station.", example = "Central Station")
+    private Long id;
+
     @Schema(description = "Name of the station.", example = "Central Station")
     private String name;
 }

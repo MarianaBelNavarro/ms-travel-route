@@ -11,7 +11,7 @@
 
 	<groupId>com.travel.route</groupId>
 	<artifactId>ms-travel-route</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0</version>
 	<name>ms-travel-route</name>
 
 	<description>Travel Route Project</description>

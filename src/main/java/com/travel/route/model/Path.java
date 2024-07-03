@@ -27,4 +27,11 @@ public class Path {
 
     @Schema(description = "The cost associated with the path.", example = "50.5")
     private double cost;
+
+    public Path(Long id, Long sourceId, Long destinationId, double cost) {
+        this.id = id;
+        this.sourceId = sourceId;
+        this.destinationId = destinationId;
+        this.cost = cost;
+    }
 }
